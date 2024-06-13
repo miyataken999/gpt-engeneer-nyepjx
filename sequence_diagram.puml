@@ -1,0 +1,13 @@
+@startuml
+participant "User" as U
+participant "ProductController" as PC
+participant "Product" as P
+participant "Database" as DB
+
+U -> PC: Create Product
+PC -> P: Create Product
+P -> DB: Save Product
+DB -> P: Product Saved
+P -> PC: Product Created
+PC -> U: Product Created
+@enduml
